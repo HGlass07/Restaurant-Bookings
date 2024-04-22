@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-gfi@l45)k2*yv+e^a=2n=$*mbco-r)b=q0lrkw7@j*na^70bnn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-hglass07-restaurantbook-jlz0ifqae61.ws-us110.gitpod.io']
+ALLOWED_HOSTS = [
+    '8000-hglass07-restaurantbook-jlz0ifqae61.ws-us110.gitpod.io',
+    '.herokuapp.com'
+
+]
 
 
 # Application definition
