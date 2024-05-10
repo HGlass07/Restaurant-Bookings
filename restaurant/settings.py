@@ -32,7 +32,6 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '8000-hglass07-restaurantbook-jlz0ifqae61.ws-us110.gitpod.io',
     '.herokuapp.com'
-
 ]
 
 
@@ -93,6 +92,12 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
