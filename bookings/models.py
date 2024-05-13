@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.db.models import IntegerField, Model
 from django.core.validators import MaxValueValidator, MinValueValidator
 
+STATUS = ((0, "Submitted"), (1, "Accepted"))
+
 # Create your models here.
 class Bookings(models.Model):
     date = models.DateField()
@@ -16,3 +18,4 @@ class Bookings(models.Model):
         User, on_delete=models.CASCADE, related_name="booking_query"
     )
     submitted_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
