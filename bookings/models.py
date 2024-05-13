@@ -11,7 +11,7 @@ class Bookings(models.Model):
             MaxValueValidator(10),
             MinValueValidator(1)
         ])
-    additional_reqs = models.CharField(max_length=200, unique=True)
+    additional_reqs = models.CharField(max_length=200, blank=True, default='')
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_query"
     )
