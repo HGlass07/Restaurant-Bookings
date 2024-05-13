@@ -4,5 +4,8 @@ from .models import Bookings
 
 # Create your views here.
 class BookingsList(generic.ListView):
-    queryset = Bookings.objects.all()
-    template_name = "bookings_page.html"
+    model = Bookings
+    template_name = "bookings_list.html"
+
+    def get_queryset(self):
+        return Bookings.objects.filter(author=self.request.user)
