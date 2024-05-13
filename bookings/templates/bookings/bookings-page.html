@@ -7,7 +7,12 @@
 </head>
 
 <body>
-    
+    <h1>Bookings list</h1>
+    {% for bookings in object_list %}
+    <p>{{bookings.date}}</p>
+    <p>{{bookings.time}}</p>
+    <p>User: {{bookings.author}}</p>
+    {% endfor %}
 </body>
 
 </html>
