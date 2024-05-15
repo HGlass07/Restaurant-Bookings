@@ -22,49 +22,39 @@
         <div id="menu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'home' %}">Home</a>
+                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{{ home_url }}">Home</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link
-                      {% if request.path == bookings_url %}active{% endif %}" aria-current="page"
-                        <a>Book a table</a>
+                    <a class="nav-link {% if request.path == bookings_url %}active{% endif %}" aria-current="page" href="{{ bookings_url }}">Book a table</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        >Register</a>
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{{ signup_url }}">Register</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                        >Logout</a>
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                        >Register</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                        >Login</a>
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login</a>
                 </li>
             </ul>
             <div>
-                <a href="{% static 'static/menu.pdf' %}" target="_blank">Menu</a>
+                <a href="{% static 'menu.pdf' %}" target="_blank">Menu</a>
             </div>
         </div>
     </header>
 
-    <section if="info">
+    <section id="info">
         <h2>
             Welcome to The Baytree
         </h2>
         <p id="background-info">
             The Baytree is a family-run restaurant where we pride ourselves on excellent food and service. 
             Relax in a warm, friendly atmosphere whilst enjoying gourmet dishes from our seasonal menu,
-            which can be viewed and downloaded <a href="static/menu.pdf">here</a>.
+            which can be viewed and downloaded <a href="{% static 'menu.pdf' %}">here</a>.
         </p>
         <p>
             Bookings can be made using our online system, and we recommend booking at least 2 weeks in advance
@@ -73,7 +63,7 @@
 
     </section>
 
-    {% block content %}>
+    {% block content %}
     {% endblock %}
 </body>
 </html>
