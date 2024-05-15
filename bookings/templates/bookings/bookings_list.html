@@ -2,20 +2,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookings</title>
-</head>
 
 <body>
-    <h1>Bookings list</h1>
+    <h1>Your Bookings</h1>
+    <br>
     {% for bookings in object_list %}
-    <p>{{bookings.date}}</p>
-    <p>{{bookings.time}}</p>
-    <p>User: {{bookings.author}}</p>
+    <p>Date: {{bookings.date}}</p>
+    <p>Time: {{bookings.time}}</p>
+    <p>Number of Guests: {{bookings.guests_number}}</p>
+    <p>Additional Requirements: {{bookings.additional_reqs}}</p>
+    <p>Confirmation Status: {{bookings.status}}</p>
+    <br>
     {% endfor %}
 </body>
 
