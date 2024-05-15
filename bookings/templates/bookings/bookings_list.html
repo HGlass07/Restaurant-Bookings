@@ -7,11 +7,19 @@
     <h1>Your Bookings</h1>
     <br>
     {% for bookings in object_list %}
-    <p>Date: {{bookings.date}}</p>
-    <p>Time: {{bookings.time}}</p>
-    <p>Number of Guests: {{bookings.guests_number}}</p>
-    <p>Additional Requirements: {{bookings.additional_reqs}}</p>
-    <p>Confirmation Status: {{bookings.status}}</p>
+    <p>Date: {{ bookings.date }}</p>
+    <p>Time: {{ bookings.time }}</p>
+    <p>Number of Guests: {{ bookings.guests_number }}</p>
+    <p>Additional Requirements: {{ bookings.additional_reqs }}</p>
+    <p>Confirmation Status: 
+        {% if bookings.status == 0 %}
+            to be confirmed
+        {% elif bookings.status == 1 %}
+            confirmed
+        {% else %}
+            unknown status
+        {% endif %}
+    </p>
     <br>
     {% endfor %}
 </body>
