@@ -1,0 +1,30 @@
+/*asterisk wildcard command to override default browser styless*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+/*generic body style*/
+body {
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    font-family: 'Rajdhani', sans-serif;
+    max-width:100vw;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+/*header*/
+header {
+    background-color:rgba(189, 219, 160, 0.596);
+    text-align:center;
+    border-bottom: 2px solid #000000;
+}
+
+#menu {
+    color:blue
+}
