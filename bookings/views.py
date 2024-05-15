@@ -9,4 +9,8 @@ class BookingsList(generic.ListView):
     template_name = "bookings_list.html"
 
     def get_queryset(self):
-        return Bookings.objects.filter(author=self.request.user)
+        if self.request.user.is_authenticated:
+            return Bookings.objects.filter(author=self.request.user)
+        else:
+            return Bookings.objects.none()
+    
