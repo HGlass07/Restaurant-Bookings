@@ -2,7 +2,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
-{% url 'bookings' as about_url %}
+{% url 'bookings' as bookings_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
@@ -14,6 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Baytree</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header>
