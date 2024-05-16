@@ -4,6 +4,8 @@
 {% block content %}
 
 <body>
+    <a href="{% url 'create_booking' %}">Create a new booking</a>
+    <br>
     <h1>Your Bookings</h1>
     <br>
     {% for bookings in object_list %}
