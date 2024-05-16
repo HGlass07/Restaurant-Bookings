@@ -14,3 +14,17 @@ class BookingForm(forms.ModelForm):
             'time': forms.TimeInput(attrs={'type': 'time', 
             'min': '12:00', 'max': '21:00'}),
         }
+    
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date < datetime.now().date():
+            raise forms.ValidationError("You cannot book a date in the past.")
+        if date > datetime.now().date() + timedelta(days=365):
+            raise forms.ValidationError("You cannot book more than a year in advance.")
+        return date
+
+    def clean_time(self):
+        time = self.cleaned_data['time']
+        if time < datetime.strptime('12:00', '%H:%M').time() or time > datetime.strptime('21:00', '%H:%M').time():
+            raise forms.ValidationError("Your booking must be between 12:00 and 19:00")
+        return time
