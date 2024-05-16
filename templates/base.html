@@ -47,7 +47,7 @@
             </div>
         </div>
     </header>
-
+    <br>
     <section id="login-message">
         {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user }}</p>
@@ -67,11 +67,12 @@
         </p>
         <p>
             Bookings can be made using our online system, and we recommend booking at least 2 weeks in advance
-            due to high table demand. 
+            due to high table demand. To make sure there is enough availability for all customers, we have a
+            limit of 2 bookings at any one time, and limit our guest numbers to 10 or less. We thank you in
+            advance for your understanding
         </p>
-
     </section>
-
+    <br>
     {% block content %}
     {% endblock %}
 </body>
