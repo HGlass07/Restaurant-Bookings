@@ -23,7 +23,7 @@ def CreateBooking(request):
             booking = form.save(commit=False)
             booking.author = request.user
             booking.save()
-            return redirect('bookings')  # Adjust this to your bookings list view URL name
+            return redirect('home') 
     else:
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
