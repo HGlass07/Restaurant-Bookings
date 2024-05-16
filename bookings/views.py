@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.views import generic
 from .models import Bookings
 from .forms import BookingForm
@@ -20,10 +21,15 @@ def CreateBooking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            booking = form.save(commit=False)
-            booking.author = request.user
-            booking.save()
-            return redirect('home') 
+            bookings_count = Bookings.objects.filter(author=request.user).count()
+            if bookings_count >= 2:
+                messages.error(request, "You cannot have more than 2 bookings at a time.")
+            else:
+                booking = form.save(commit=False)
+                booking.author = request.user
+                booking.save()
+                messages.success(request, "Booking successful!")
+                return redirect('home') 
     else:
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
