@@ -13,4 +13,6 @@ class BookingsList(generic.ListView):
             return Bookings.objects.filter(author=self.request.user)
         else:
             return Bookings.objects.none()
+
+
     
