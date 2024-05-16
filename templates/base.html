@@ -29,17 +29,18 @@
                     <a class="nav-link {% if request.path == bookings_url %}active{% endif %}" aria-current="page" href="{{ bookings_url }}">Book a table</a>
                 </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{{ signup_url }}">Register</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login</a>
-                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{{ signup_url }}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login</a>
+                    </li>
+                {% endif %}
             </ul>
             <div>
                 <a href="{% static 'menu.pdf' %}" target="_blank">Menu</a>
