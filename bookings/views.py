@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.views import generic
 from django.views.generic import UpdateView, DeleteView
-from .models import Bookings, Edit
+from .models import Bookings
 from .forms import BookingForm
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
@@ -41,7 +41,7 @@ def CreateBooking(request):
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
 
-class EditBooking(request, date):
+class EditBooking(UpdateView):
     model = Bookings
     form_class = BookingForm
     template_name = 'edit_booking.html'

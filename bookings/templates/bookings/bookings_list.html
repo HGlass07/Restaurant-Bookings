@@ -28,6 +28,10 @@
                         {% endif %}
                     </p>
                     <br>
+                    <section>
+                        <a href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
+                        <a href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
+                    </section>
                 {% endfor %}
             {% endif %}
         </section>
