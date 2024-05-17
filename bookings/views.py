@@ -1,9 +1,12 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.views import generic
-from .models import Bookings
+from django.views.generic import UpdateView, DeleteView
+from .models import Bookings, Edit
 from .forms import BookingForm
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 # Create your views here.
 
@@ -37,6 +40,26 @@ def CreateBooking(request):
     else:
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
+
+class EditBooking(request, date):
+    model = Bookings
+    form_class = BookingForm
+    template_name = 'edit_booking.html'
+    success_url = reverse_lazy('bookings_list')
+
+    def get_queryset(self):
+        return self.model.objects.filter(author=self.request.user)
+
+class DeleteBooking(DeleteView):
+    model = Bookings
+    template_name = 'delete_booking.html'
+    success_url = reverse_lazy('bookings_list')
+
+    def get_queryset(self):
+        return self.model.objects.filter(author=self.request.user)
+
+
+
 
 
     
