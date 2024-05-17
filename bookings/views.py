@@ -27,9 +27,13 @@ def CreateBooking(request):
             else:
                 booking = form.save(commit=False)
                 booking.author = request.user
-                booking.save()
-                messages.success(request, "Booking successful!")
-                return redirect('home') 
+                booking_conflict = Bookings.objects.filter(date=booking.date, time=booking.time)
+                if booking_conflict.exists():
+                    messages.error(request, "This booking has been taken, please select another.")
+                else:
+                    booking.save()
+                    messages.success(request, "Booking successful!")
+                    return redirect('home') 
     else:
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
