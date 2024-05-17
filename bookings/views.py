@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy
 from django.contrib import messages
 from django.views import generic
 from django.views.generic import UpdateView, DeleteView
@@ -45,15 +46,21 @@ class EditBooking(UpdateView):
     model = Bookings
     form_class = BookingForm
     template_name = 'edit_booking.html'
-    success_url = reverse_lazy('bookings_list')
+    success_url = reverse_lazy('home')
 
     def get_queryset(self):
         return self.model.objects.filter(author=self.request.user)
 
+    def form_valid(self, form):
+        booking = form.save(commit=False)
+        booking.status = 0
+        booking.save()
+        return super().form_valid(form)
+
 class DeleteBooking(DeleteView):
     model = Bookings
     template_name = 'delete_booking.html'
-    success_url = reverse_lazy('bookings_list')
+    success_url = reverse_lazy('home')
 
     def get_queryset(self):
         return self.model.objects.filter(author=self.request.user)
