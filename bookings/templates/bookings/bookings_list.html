@@ -3,7 +3,11 @@
 
 {% block content %}
     <body>
-        <a href="{% url 'create_booking' %}">Create a new booking</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'create_booking' %}">Create a new booking</a>
+        {% else %}
+            <p>Please <a href="{% url 'account_login' %}">log in</a> to create a booking.</p>
+        {% endif %}
         <br>
         <section>
             {% if user.is_authenticated %}

@@ -4,10 +4,12 @@
   <h1>Create a Booking</h1>
   {% if messages %}
     <ul class="messages">
+      <br>
         {% for message in messages %}
             <li{% if message.tags %} class="{{ message.tags }}"
             {% endif %}>{{ message }}</li>
         {% endfor %}
+        <br>
     </ul>
   {% endif %}
   <form method="post">
