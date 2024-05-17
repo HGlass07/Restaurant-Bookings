@@ -24,11 +24,13 @@
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{{ home_url }}">Home</a>
                 </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == bookings_url %}active{% endif %}" aria-current="page" href="{{ bookings_url }}">Book a table</a>
+                <li>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'create_booking' %}">Book a table</a>
+                {% else %}
+                    <a href="{% url 'account_login' %}">Book a table</a>
+                {% endif %}
                 </li>
-                
                 {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
