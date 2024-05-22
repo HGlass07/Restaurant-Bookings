@@ -26,9 +26,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: black
 }
 
-header h1 {
+h1 {
     text-transform: uppercase;
     margin: 20px 0;
 }
@@ -50,6 +51,7 @@ header h1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 #business-info li {
@@ -58,6 +60,7 @@ header h1 {
 
 .no-decorator {
     text-decoration: none !important;
+    color: black;
 }
 
 #info {
@@ -73,4 +76,26 @@ header h1 {
     background-color: rgb(235, 221, 120);
     text-align: right;
     padding: 10px;
+}
+
+/*footer*/
+footer {
+    background-color:rgb(235, 221, 120);
+    height:70px;
+    border-top: solid 2px #000000;
+}
+
+/*links to social media and youtube*/
+#social-media-links {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-media-links i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
 }
