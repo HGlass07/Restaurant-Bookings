@@ -46,9 +46,15 @@ header {
 
 #info {
     text-align: center;
-    margin: 10px;
+    margin: 20px;
 }
 
 #info p {
     margin: 10px;
+}
+
+#login-message {
+    background-color: rgb(235, 221, 120);
+    text-align: right;
+    margin-top: -20px;
 }
