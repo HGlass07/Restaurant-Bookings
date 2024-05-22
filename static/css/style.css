@@ -20,11 +20,29 @@ h1 {
 
 /*header*/
 header {
-    background-color:rgba(189, 219, 160, 0.596);
+    background-image: url("static/assets/images/header-image.jpg");
     text-align:center;
     border-bottom: 2px solid #000000;
 }
 
 #menu {
-    color:blue
+    display:flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0 1rem;
+    margin:6px
+}
+
+#business-info {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#info {
+    text-align: center;
+    margin: 10px;
+}
+
+#info p {
+    margin: 10px;
 }

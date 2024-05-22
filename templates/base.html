@@ -19,8 +19,8 @@
 <body>
     <header>
         <a href="{% url 'home' %}">The Baytree</a>
-        <div id="menu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div>
+            <ul id="menu">
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{{ home_url }}">Home</a>
                 </li>
@@ -44,7 +44,7 @@
                     </li>
                 {% endif %}
             </ul>
-            <div>
+            <div id="menu">
                 <a href="{% static 'Menu.pdf' %}" target="_blank">Menu</a>
             </div>
         </div>
@@ -75,7 +75,7 @@
         <h2>
             Welcome to The Baytree
         </h2>
-        <p id="background-info">
+        <p>
             The Baytree is a family-run restaurant where we pride ourselves on excellent food and service. 
             Relax in a warm, friendly atmosphere whilst enjoying gourmet dishes from our seasonal menu,
             which can be viewed and downloaded <a href="{% static 'Menu.pdf' %}" target="_blank">here</a>.
@@ -83,7 +83,10 @@
         <p>
             Bookings can be made using our online system, and we recommend booking at least 2 weeks in advance
             due to high table demand. To make sure there is enough availability for all customers, we have a
-            limit of 2 bookings at any one time, and limit our guest numbers to 10 or less. We will endevour to 
+            limit of 2 bookings at any one time, and limit our guest numbers to 10 or less. 
+        </p>
+        <p>
+            We will endevour to 
             confirm your booking as soo as we can. Thank you in advance for your understanding
         </p>
     </section>
