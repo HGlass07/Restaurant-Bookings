@@ -26,35 +26,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <a href="{% url 'home' %}">The Baytree</a>
+    <header id="menu">
+        <h1><a class="no-decorator" href="{% url 'home' %}">The Baytree</a></h1>
         <div>
-            <ul id="menu">
+            <ul id="menu-items">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{{ home_url }}">Home</a>
+                    <a class="no-decorator nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{{ home_url }}">Home</a>
                 </li>
                 <li>
                 {% if user.is_authenticated %}
-                    <a href="{% url 'create_booking' %}">Book a table</a>
+                    <a class="no-decorator" href="{% url 'create_booking' %}">Book a table</a>
                 {% else %}
-                    <a href="{% url 'account_login' %}">Book a table</a>
+                    <a class="no-decorator" href="{% url 'account_login' %}">Book a table</a>
                 {% endif %}
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
+                        <a class="no-decorator nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{{ logout_url }}">Logout</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{{ signup_url }}">Register</a>
+                        <a class="no-decorator nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{{ signup_url }}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login</a>
+                        <a class="no-decorator nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{{ login_url }}">Login</a>
                     </li>
                 {% endif %}
             </ul>
-            <div id="menu">
-                <a href="{% static 'Menu.pdf' %}" target="_blank">Menu</a>
+            <div id="menu-download">
+                <a class="no-decorator" href="{% static 'Menu.pdf' %}" target="_blank">Menu</a>
             </div>
         </div>
     <section id="business-info">
@@ -71,7 +71,6 @@
         </ul>
     </section>
     </header>
-    <br>
     <section id="login-message">
         {% if user.is_authenticated %}
         <p class="text-end m-3">You are logged in as {{ user }}</p>
