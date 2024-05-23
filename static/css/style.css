@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
 
 /*asterisk wildcard command to override default browser styles*/
@@ -16,6 +15,16 @@ body {
     font-family: 'Antic Didone', sans-serif;
     font-weight: bold;
     max-width: 100vw;
+}
+
+.no-decorator {
+    text-decoration: none !important;
+    color: black;
+}
+
+.buttons {
+    text-decoration: none !important;
+    font-weight: bolder;
 }
 
 /*header*/
@@ -58,11 +67,7 @@ h1 {
     list-style: none;
 }
 
-.no-decorator {
-    text-decoration: none !important;
-    color: black;
-}
-
+/*homepage info*/
 #info {
     text-align: center;
     margin: 20px;
@@ -78,10 +83,28 @@ h1 {
     padding: 10px;
 }
 
+/*rules for bookings display, and related creation/edit/delete views*/
+.bookings-list {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#create-booking {
+    padding: 20px;
+}
+
+#status-tbc {
+    color: rgb(233, 178, 78);
+}
+
+#status-confirmed {
+    color: green;
+}
+
 /*footer*/
 footer {
-    background-color:rgb(235, 221, 120);
-    height:70px;
+    background-color: rgb(235, 221, 120);
+    height: 70px;
     border-top: solid 2px #000000;
 }
 
@@ -98,4 +121,14 @@ footer {
     font-size: 160%;
     padding: 5%;
     color: #3a3a3a;
+}
+
+
+/* Desktop and larger media query */
+@media screen and (min-width: 992px) {
+    #info {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 40px;
+    }
 }

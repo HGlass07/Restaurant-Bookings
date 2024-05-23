@@ -1,22 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <a href="{% url 'home' %}">Back</a>
-  <br>
-  <h1>Create a Booking</h1>
-  {% if messages %}
+<section class="bookings-list">
+    <a href="{% url 'home' %}">Back</a>
+    <br>
+    <h1>Create a Booking</h1>
+    {% if messages %}
     <ul class="messages">
-      <br>
-        {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"
-            {% endif %}>{{ message }}</li>
-        {% endfor %}
         <br>
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+            <br>
     </ul>
-  {% endif %}
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-  </form>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</section>
 {% endblock %}>
