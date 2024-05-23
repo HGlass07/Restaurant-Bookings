@@ -92,11 +92,17 @@ h1 {
 #booking-details {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: space-around;
+    gap: 10px;
+    margin-left: 20px;
+    margin-right: 12px;
 }
 
 #single-booking {
-    flex: 1 1 20%;
+    flex: 1 1 20%; 
+    margin: 5px; 
+    border: 1px solid #000; 
+    padding: 10px; 
 }
 
 #create-booking {
