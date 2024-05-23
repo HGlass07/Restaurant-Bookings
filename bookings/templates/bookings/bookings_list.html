@@ -11,31 +11,35 @@
     <br>
     <br>
     <section>
-        {% if user.is_authenticated %}
         <h2>Your Bookings:</h2>
         <br>
-        {% for bookings in object_list %}
-        <p>Date: {{ bookings.date }}</p>
-        <p>Time: {{ bookings.time }}</p>
-        <p>Number of Guests: {{ bookings.guests_number }}</p>
-        <p>Additional Requirements: {{ bookings.additional_reqs }}</p>
-        <p>Confirmation Status:
-            {% if bookings.status == 0 %}
-            <span id="status-tbc">to be confirmed</span>
-            {% elif bookings.status == 1 %}
-            <span id="status-confirmed">confirmed</span>
-            {% else %}
-            unknown status
+        <div id="booking-details">
+            {% if user.is_authenticated %}
+            {% for bookings in object_list %}
+            <div id="single-booking">
+                <p>Date: {{ bookings.date }}</p>
+                <p>Time: {{ bookings.time }}</p>
+                <p>Number of Guests: {{ bookings.guests_number }}</p>
+                <p>Additional Requirements: {{ bookings.additional_reqs }}</p>
+                <p>Confirmation Status:
+                    {% if bookings.status == 0 %}
+                    <span id="status-tbc">to be confirmed</span>
+                    {% elif bookings.status == 1 %}
+                    <span id="status-confirmed">confirmed</span>
+                    {% else %}
+                    unknown status
+                    {% endif %}
+                </p>
+                <br>
+                <section>
+                    <a class="buttons" href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
+                    <a class="buttons" href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
+                </section>
+            </div>
+            <br>
+            {% endfor %}
             {% endif %}
-        </p>
-        <br>
-        <section>
-            <a class="buttons" href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
-            <a class="buttons" href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
-        </section>
-        <br>
-        {% endfor %}
-        {% endif %}
+        </div>
     </section>
     <br>
 </section>

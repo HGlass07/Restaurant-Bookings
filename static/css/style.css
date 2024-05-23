@@ -88,6 +88,17 @@ h1 {
     align-items: center;
     margin-bottom: 30px;
 }
+
+#booking-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#single-booking {
+    flex: 1 1 20%;
+}
+
 #create-booking {
     padding: 20px;
 }
@@ -101,7 +112,11 @@ h1 {
 }
 
 #booking-form {
-    
+    justify-content: right;
+}
+
+.form-field {
+    margin: 5px;
 }
 
 /*footer*/

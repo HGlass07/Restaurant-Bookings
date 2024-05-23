@@ -9,7 +9,30 @@
     <h2>Edit Booking</h2>
     <form method ="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div class="form-field">
+            <label for="date">
+                Date:
+            </label>
+            {{ form.date }}
+        </div>
+        <div class="form-field">
+            <label for="time">
+                Time:
+            </label>
+            {{ form.time }}
+        </div>
+        <div class="form-field">
+            <label for="guests">
+                Guests:
+            </label>
+            {{ form.guests_number }}
+        </div>
+        <div class="form-field">
+            <label for="additional-reqs">
+                Additional Requirements:
+            </label>
+            {{ form.additional_reqs }}
+        </div>
         <button class="buttons" type="submit">Save Changes</button>
     </form>
 </section>
