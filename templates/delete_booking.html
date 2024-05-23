@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="{% url 'home' %}">Back</a>
-<br>
-<h2>Delete Booking</h2>
-<form method ="post">
-    {% csrf_token %}
-    <p>Are you sure you wish to delete this booking?</p>
-    <button type="submit">Delete</button>
-</form>
+<section class="bookings-list">
+    <a class="buttons" href="{% url 'home' %}">Back</a>
+    <br>
+    <h2>Delete Booking</h2>
+    <form method ="post">
+        {% csrf_token %}
+        <p>Are you sure you wish to delete this booking?</p>
+        <button class="buttons" type="submit">Delete</button>
+    </form>
+</section>
 {% endblock %}

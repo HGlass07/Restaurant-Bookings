@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="{% url 'home' %}">Back</a>
-<br>
-<p>Please note, once a booking has been altered, it will need to be re-approved</p>
-<br>
-<h2>Edit Booking</h2>
-<form method ="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Save Changes</button>
-</form>
+<section class="bookings-list">
+    <a class="buttons" href="{% url 'home' %}">Back</a>
+    <br>
+    <p>Please note, once a booking has been altered, it will need to be re-approved</p>
+    <br>
+    <h2>Edit Booking</h2>
+    <form method ="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="buttons" type="submit">Save Changes</button>
+    </form>
+</section>
 {% endblock %}

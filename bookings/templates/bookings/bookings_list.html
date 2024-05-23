@@ -6,7 +6,7 @@
     {% if user.is_authenticated %}
     <a class="buttons" id="create-booking" href="{% url 'create_booking' %}">Create a new booking</a>
     {% else %}
-    <p>Please <a href="{% url 'account_login' %}">log in</a> to create a booking.</p>
+    <p>Please <a class="buttons" href="{% url 'account_login' %}">log in</a> to create a booking.</p>
     {% endif %}
     <br>
     <br>
@@ -30,8 +30,8 @@
         </p>
         <br>
         <section>
-            <a href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
-            <a href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
+            <a class="buttons" href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
+            <a class="buttons" href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
         </section>
         <br>
         {% endfor %}
