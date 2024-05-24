@@ -120,6 +120,9 @@ The models and views used in this project were created with the aid of the follo
 - Reverse/reverse_lazy functions - Django documentation
   https://docs.djangoproject.com/en/5.0/ref/urlresolvers/
 
+- Edit booking UpdateView - Geeks for Geeks
+  https://www.geeksforgeeks.org/updateview-class-based-views-django/
+
 - Booking custom model - inspired by Code Institute's 'Post' model used in the 'I Think Therefore I Blog' module
 
 
