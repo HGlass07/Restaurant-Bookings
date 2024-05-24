@@ -17,6 +17,8 @@
             {% trans "Sign Up" %}
         {% endelement %}
         <a class="buttons" href="{% url 'home' %}">Back</a>
+        <br>
+        <br>
         {% setvar link %}
             <a href="{{ login_url }}">
             {% endsetvar %}
@@ -24,7 +26,7 @@
             </a>
         {% endsetvar %}
         {% element p %}
-            {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
+            {% blocktranslate %}Already have an account? Then please log in <a class="buttons" href="{{ login_url }}">{{ _('sign up') }}here</a>.{% endblocktranslate %}
         {% endelement %}
         {% if not SOCIALACCOUNT_ONLY %}
             {% url 'account_signup' as action_url %}
