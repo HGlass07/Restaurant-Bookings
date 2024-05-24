@@ -16,7 +16,7 @@
         <a class="buttons" href="{% url 'home' %}">Back</a>
         {% if not SOCIALACCOUNT_ONLY %}
             {% if signup_url %}
-                <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">{{ _('sign up') }}</a> first.{% endblocktrans %}</p>
+                <p>{% blocktrans %}If you have not created an account yet, then please do so <a class="buttons" href="{{ signup_url }}">{{ _('sign up') }}here</a>.{% endblocktrans %}</p>
             {% endif %}
             <form method="post" action="{% url 'account_login' %}" tags="entrance,login">
                 {% csrf_token %}

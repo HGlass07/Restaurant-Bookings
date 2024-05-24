@@ -36,7 +36,7 @@ def CreateBooking(request):
                     messages.error(request, "This booking has been taken, please select another.")
                 else:
                     booking.save()
-                    messages.success(request, "Booking successful!")
+                    messages.success(request, "Booking request successful")
                     return redirect('home') 
     else:
         form = BookingForm()
