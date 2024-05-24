@@ -11,10 +11,11 @@
     <br>
     <br>
     <section>
+        {% if user.is_authenticated %}
         <h2>Your Bookings:</h2>
         <br>
         <div id="booking-details">
-            {% if user.is_authenticated %}
+            
             {% for bookings in object_list %}
             <div id="single-booking">
                 <p>Date: {{ bookings.date }}</p>
@@ -33,13 +34,15 @@
                 <br>
                 <section>
                     <a class="buttons" href="{% url 'edit_booking' bookings.pk %}">Edit booking</a>
+                    <br>
                     <a class="buttons" href="{% url 'delete_booking' bookings.pk %}">Delete booking</a>
                 </section>
             </div>
             <br>
             {% endfor %}
-            {% endif %}
+            
         </div>
+        {% endif %}
     </section>
     <br>
 </section>

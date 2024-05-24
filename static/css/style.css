@@ -82,11 +82,19 @@ h1 {
     padding: 10px;
 }
 
+.messages {
+    text-align: center;
+    margin: 20px;
+    list-style-type: none;
+}
+
 /*rules for bookings display, and related creation/edit/delete views*/
 .bookings-list {
     text-align: center;
     align-items: center;
     margin-bottom: 30px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 #booking-details {

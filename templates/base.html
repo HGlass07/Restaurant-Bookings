@@ -83,6 +83,13 @@
         <p>We will endeavor to confirm your booking as soon as we can. Thank you in advance for your understanding.</p>
     </section>
     <br>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     {% block content %}
     {% endblock %}
 
