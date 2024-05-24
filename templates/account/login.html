@@ -1,51 +1,41 @@
-{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
 {% load allauth account %}
 
-<div id="log-in">
-    {% block head_title %}
-        {% trans "Sign In" %}
-    {% endblock head_title %}
-    {% block content %}
-        {% element h1 %}
-            {% trans "Sign In" %}
-        {% endelement %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="form-body">
+    <div id="log-in" class="login-form">
+        <h1>{% trans "Sign In" %}</h1>
+        <a class="buttons" href="{% url 'home' %}">Back</a>
         {% if not SOCIALACCOUNT_ONLY %}
-            {% setvar link %}
-                <a href="{{ signup_url }}">
-                {% endsetvar %}
-                {% setvar end_link %}
-                </a>
-            {% endsetvar %}
-            {% element p %}
-                {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
-            {% endelement %}
-            {% url 'account_login' as login_url %}
-            {% element form form=form method="post" action=login_url tags="entrance,login" %}
-                {% slot body %}
-                    {% csrf_token %}
-                    {% element fields form=form unlabeled=True %}
-                    {% endelement %}
+            {% if signup_url %}
+                <p>{% blocktrans %}If you have not created an account yet, then please <a href="{{ signup_url }}">{{ _('sign up') }}</a> first.{% endblocktrans %}</p>
+            {% endif %}
+            <form method="post" action="{% url 'account_login' %}" tags="entrance,login">
+                {% csrf_token %}
+                <div class="form-fields">
+                    {{ form.as_p }}
                     {{ redirect_field }}
-                {% endslot %}
-                {% slot actions %}
-                    {% element button type="submit" tags="prominent,login" %}
-                        {% trans "Sign In" %}
-                    {% endelement %}
-                {% endslot %}
-            {% endelement %}
+                </div>
+                <button type="submit" class="submit-button">{% trans "Sign In" %}</button>
+            </form>
         {% endif %}
         {% if LOGIN_BY_CODE_ENABLED %}
-            {% element hr %}
-            {% endelement %}
-            {% element h2 %}
-                {% element button href=request_login_code_url tags="prominent,login,secondary" %}
-                    {% trans "Mail me a sign-in code" %}
-                {% endelement %}
-            {% endelement %}
+            <hr>
+            <h2>
+                <a href="{{ request_login_code_url }}" class="login-code-button">{% trans "Mail me a sign-in code" %}</a>
+            </h2>
         {% endif %}
         {% if SOCIALACCOUNT_ENABLED %}
             {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
         {% endif %}
-    {% endblock content %}
-</div>
+    </div>
+</body>
+</html>
