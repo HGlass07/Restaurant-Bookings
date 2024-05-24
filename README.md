@@ -100,11 +100,27 @@ This app was deployed with Heroku and linked to a GitHub repository, using the s
 
 Images:
 
+Pexels:
+- Header image: 'Green Leaf', Min An
 
 Favicon:
 
 
 Django Models:
+
+The models and views used in this project were created with the aid of the following:
+
+- Form widgets, date/time objects - Django documentation
+  https://docs.djangoproject.com/en/5.0/ref/forms/widgets/
+  https://docs.djangoproject.com/en/5.0/topics/i18n/timezones/
+
+- Form strptime method - Programiz
+  https://www.programiz.com/python-programming/datetime/strptime
+
+- Reverse/reverse_lazy functions - Django documentation
+  https://docs.djangoproject.com/en/5.0/ref/urlresolvers/
+
+- Booking custom model - inspired by Code Institute's 'Post' model used in the 'I Think Therefore I Blog' module
 
 
 
