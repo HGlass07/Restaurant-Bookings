@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /*generic body style*/
 body {
     min-height: 100vh;
@@ -132,6 +136,15 @@ h1 {
 .form-field {
     margin: 5px;
 }
+
+/*styles for allauth account templates*/
+
+/*login form*/
+
+#log-in {
+    color: blue;
+}
+
 
 /*footer*/
 footer {
