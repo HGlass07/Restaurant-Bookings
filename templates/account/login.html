@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body class="form-body">
-    <div id="log-in" class="login-form">
+    <div id="log-in" class="form">
         <h1>{% trans "Sign In" %}</h1>
         <a class="buttons" href="{% url 'home' %}">Back</a>
         {% if not SOCIALACCOUNT_ONLY %}
@@ -39,3 +39,5 @@
     </div>
 </body>
 </html>
+
+
