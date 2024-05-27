@@ -9,25 +9,39 @@
 
 --------------
 
-[Site Link]
+[Site Link](https://restaurantbookingshg-d7fb2ddafa04.herokuapp.com/)
 
 ## Description:
 
+This site is designed to allow users to be able to set up bookings at a restaurant called The Baytree. It includes several features including the ability to create an account, make bookings with custom specifications, as well as alter these bookings after they have been made. 
+
+When visiting the site, users are given a description of the restaurant and the booking system; as well as an opportunity to view a pdf version of the menu which can also be downloaded. The contact details for the restaurant are also visible at the top of the page. 
+
+In order to make a booking, users are required to create an account - this is so they can keep track of their individual bookings and edit them whilst logged in. 
+
+
 
 **Site-owner Goals:**
+- Provide a simple to use, easily navigable booking portal for customers - to save having to phone or email the restaurant itself.
+- Allow users to see details of their bookings, as well as their confirmation status.
+- Allow users to edit or delete their bookings if needed.
+- Provide users with a view of the restaurant menu as part of the site
 
 
 ### User-stories:
 
 **First-time user:**
-
+- As a first time user, I want to easily see how I can make a booking, without having to click through lots of pages
+- I want to be able to see the business hours of the restaurant clearly, as well as any requirements or restrictions on making bookings
 
 **Returning user:**
-
+- As a returning user, I want to be able to easily access my current bookings
+- I want to have the option to edit or delete bookings if my plans change.
 
 --------------
 
 ## Design: 
+The design of the site was kept simple and elegant, to keep with the theme of the restaurant. Users are able to access all the site features from the homepage. The restaurant itself has an outdoor, natural theme to match it's name. This is also reflected in the menu design. The colours used are designed to give good contrast, and keep a consistent theme througout the site.
 
 
 **Wireframes - made using Balsamiq**
@@ -99,11 +113,13 @@ This app was deployed with Heroku and linked to a GitHub repository, using the s
 ## Credits:
 
 Images:
-
-Pexels:
-- Header image: 'Green Leaf', Min An
+- Header image: 'Green Leaf', Min An, Pexels
 
 Favicon:
+- Emoji Favicons > Herb, From the open source project Twemoji. Used under licence - https://creativecommons.org/licenses/by/4.0/
+
+Menu design:
+- Based on the 'Elegant dinner menu' theme from Microsoft Word templates
 
 
 Django Models:
