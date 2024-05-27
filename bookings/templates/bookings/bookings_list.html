@@ -1,6 +1,21 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+
+<section id="info">
+    <h2>Welcome to The Baytree</h2>
+    <p>The Baytree is a family-run restaurant where we pride ourselves on excellent food and service. 
+        Relax in a warm, friendly atmosphere whilst enjoying gourmet dishes from our seasonal menu,
+        which can be viewed and downloaded <a class="buttons" href="{% static 'Menu.pdf' %}" target="_blank">here</a>.
+    </p>
+    <p>Bookings can be made using our online system, and we recommend booking at least 2 weeks in advance
+        due to high table demand. To make sure there is enough availability for all customers, we have a
+        limit of 2 bookings at any one time, and limit our guest numbers to 10 or less.
+    </p>
+    <p>We will endeavor to confirm your booking as soon as we can. Thank you in advance for your understanding.</p>
+</section>
+<br>
 
 <section class="bookings-list">
     {% if user.is_authenticated %}
