@@ -43,6 +43,9 @@ In order to make a booking, users are required to create an account - this is so
 ## Design: 
 The design of the site was kept simple and elegant, to keep with the theme of the restaurant. Users are able to access all the site features from the homepage. The restaurant itself has an outdoor, natural theme to match it's name. This is also reflected in the menu design. The colours used are designed to give good contrast, and keep a consistent theme througout the site.
 
+This design planning of the site was done using github projects, and was based around a set of core 'user stories', details of which can be found below:
+
+[Github Project](https://github.com/users/HGlass07/projects/6)
 
 **Wireframes - made using Balsamiq**
   
