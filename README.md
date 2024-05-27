@@ -13,6 +13,14 @@
 
 ## Description:
 
+This site designed to allow users to be able to set up bookings at a restaurant called The Baytree. It includes several features including the ability to create an account, make bookings with custom specifications, as well as alter these bookings after they have been made. 
+
+When visiting the site, users are given a description of the restaurant and the booking system; as well as an opportunity to view a pdf version of the menu which can also be downloaded. The contact details for the restaurant are also visible at the top of the page. 
+
+In order to make a booking, users are required to create an account - this is so they can keep track of their individual bookings and edit them whilst logged in. 
+
+
+
 
 **Site-owner Goals:**
 
@@ -104,6 +112,7 @@ Pexels:
 - Header image: 'Green Leaf', Min An
 
 Favicon:
+- Emoji Favicons > Herb, From the open source project Twemoji. Used under licence - https://creativecommons.org/licenses/by/4.0/
 
 
 Django Models:
