@@ -13,12 +13,17 @@ html {
 
 /*generic body style*/
 body {
+    height: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Marcellus', sans-serif;
     max-width: 100vw;
     background-image: linear-gradient(to bottom right, white, rgba(139, 211, 125, 0.479));
+}
+
+main {
+    flex: 1;
 }
 
 .no-decorator {
