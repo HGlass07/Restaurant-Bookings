@@ -5,7 +5,7 @@
     <a class="buttons" href="{% url 'home' %}">Back</a>
     <br>
     <h2>Delete Booking</h2>
-    <form method ="post">
+    <form class="alter-form" method ="post">
         {% csrf_token %}
         <p>Are you sure you wish to delete this booking?</p>
         <button class="buttons" type="submit">Delete</button>
