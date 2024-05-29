@@ -9,7 +9,9 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
+
 # Create your views here.
+
 
 class BookingsList(generic.ListView):
     model = Bookings
@@ -21,19 +23,22 @@ class BookingsList(generic.ListView):
         else:
             return Bookings.objects.none()
 
+
 def CreateBooking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             bookings_count = Bookings.objects.filter(author=request.user).count()
             if bookings_count >= 2:
-                messages.error(request, "You cannot have more than 2 bookings at a time.")
+                messages.error(request, 
+                "You cannot have more than 2 bookings at a time.")
             else:
                 booking = form.save(commit=False)
                 booking.author = request.user
                 booking_conflict = Bookings.objects.filter(date=booking.date, time=booking.time)
                 if booking_conflict.exists():
-                    messages.error(request, "This booking has been taken, please select another.")
+                    messages.error(request, 
+                    "This booking has been taken, please select another.")
                 else:
                     booking.save()
                     messages.success(request, "Booking request successful")
@@ -41,6 +46,7 @@ def CreateBooking(request):
     else:
         form = BookingForm()
     return render(request, 'create_booking.html', {'form': form})
+
 
 class EditBooking(UpdateView):
     model = Bookings
@@ -57,6 +63,7 @@ class EditBooking(UpdateView):
         booking.save()
         return super().form_valid(form)
 
+
 class DeleteBooking(DeleteView):
     model = Bookings
     template_name = 'delete_booking.html'
@@ -64,7 +71,6 @@ class DeleteBooking(DeleteView):
 
     def get_queryset(self):
         return self.model.objects.filter(author=self.request.user)
-
 
 
 
