@@ -6,6 +6,8 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 STATUS = ((0, "Submitted"), (1, "Accepted"))
 
 # Create your models here.
+
+
 class Bookings(models.Model):
     date = models.DateField()
     time = models.TimeField(auto_now=False, auto_now_add=False)
