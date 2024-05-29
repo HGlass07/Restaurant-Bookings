@@ -32,8 +32,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '8000-hglass07-restaurantbook-jlz0ifqae61.ws-eu114.gitpod.io',
-    'restaurantbookingshg-d7fb2ddafa04.herokuapp.com/'
+    '.herokuapp.com'
 ]
+
 
 # Application definition
 
