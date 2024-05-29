@@ -20,7 +20,6 @@ When visiting the site, users are given a description of the restaurant and the 
 In order to make a booking, users are required to create an account - this is so they can keep track of their individual bookings and edit them whilst logged in. 
 
 
-
 **Site-owner Goals:**
 - Provide a simple to use, easily navigable booking portal for customers - to save having to phone or email the restaurant itself.
 - Allow users to see details of their bookings, as well as their confirmation status.
@@ -118,12 +117,14 @@ This app was deployed with Heroku and linked to a GitHub repository, using the s
 Images:
 - Header image: 'Green Leaf', Min An, Pexels
 
+Link Icons:
+- Social media link icons taken from fontawesome
+
 Favicon:
 - Emoji Favicons > Herb, From the open source project Twemoji. Used under licence - https://creativecommons.org/licenses/by/4.0/
 
-Menu design:
+Menu Design:
 - Based on the 'Elegant dinner menu' theme from Microsoft Word templates
-
 
 Django Models:
 
