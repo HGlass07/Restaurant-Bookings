@@ -8,11 +8,11 @@ class BookingForm(forms.ModelForm):
         fields = ['date', 'time', 'guests_number', 'additional_reqs']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date', 
-            'min': datetime.now() + timedelta(days=7), 
-            'max': (datetime.now() + timedelta(days=365)).date()}),
-
+                                            'min': (datetime.now() + timedelta(days=7)).strftime('%Y-%m-%d'), 
+                                            'max': (datetime.now() + timedelta(days=365)).strftime('%Y-%m-%d')}),
             'time': forms.TimeInput(attrs={'type': 'time', 
-            'min': '12:00', 'max': '21:00'}),
+                                            'min': '12:00', 'max': '21:00'}),
+            'guests_number': forms.NumberInput(attrs={'min': '1', 'max': '10'}),
         }
     
     def clean_date(self):
