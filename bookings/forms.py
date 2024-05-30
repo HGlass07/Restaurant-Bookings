@@ -18,6 +18,11 @@ class BookingForm(forms.ModelForm):
                 attrs={'type': 'time', 'min': '12:00', 'max': '21:00'}),
             'guests_number': forms.NumberInput
             (attrs={'min': '1', 'max': '10'}),
+            'additional_reqs': forms.Textarea(attrs={
+                'rows': 4, 
+                'cols': 40,
+                'class': 'text-area',
+                }),
         }
 
     def clean_date(self):
