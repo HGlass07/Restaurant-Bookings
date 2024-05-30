@@ -104,10 +104,12 @@ This design planning of the site was done using github projects, and was based a
 This app was deployed with Heroku and linked to a GitHub repository, using the steps below:
 
 - Clone or fork the relevant repository
+- In your chosen IDE, type pip3 freeze --local > requirements.txt to create the requirements file.
+- Create a Procfileand insert the relevent gunicorn script - web: gunicorn restaurant.wsgi
 - Create a new app in Heroku
 - Link the app to the relevant GitHub repository
-- Create a config var named PORT set to a value of 8000
-- Add the NodeJS and Python buildpacks
+- Ensure a secret key is created in config_vars
+- Link the database URL to Heroku in config_vars
 - Deploy the app, making sure the correct repository branch is selected, in this case 'main'
 
 
