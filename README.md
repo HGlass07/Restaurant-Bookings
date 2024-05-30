@@ -61,6 +61,35 @@ This design planning of the site was done using github projects, and was based a
 --------------
 ## Testing:
 
+In the course of creating this project it was necessary to test each feature to ensure they achieved the desired outcome. Below are details of the manual testing undertaking both by myself and others - accounts were set up for several test users, as well as another admin.
+
+Form and sign-up related buttons and features:
+- User should be taken to a registration page when clicking the 'register' button in the site header - correct
+- User should be taken to the login page when clicking the 'login' button in the site header - correct
+- When clicking the log out button while logged in, the user should be taken to a seperate page to confirm logout - correct
+- When a user confirms logout they must be returned to the homepage - correct
+
+Views and feedback:
+- When not signed in, a user should not be able to see any booking details - correct
+- When signed in, the user should see their bookings, but no one elses - correct
+- When a booking has been confirmed by an admin on the backend, the status of the booking should change and be visible to the user - correct
+- Once a booking has been deleted it should no longer appear - correct
+- When a user is logged in, the login status message should confirm this with their username - correct
+- When clicking on the menu button from the header, or the homepage text, they should be presented with a pdf version of the menu - correct
+- If a user attempts to create a booking without being signed in, they should be re-directed to the login page - correct
+
+Navigation and footer buttons:
+- When clicking on the home button the user should be returned to the homepage - correct
+- When clicking 'back' from the login, log out and register pages, the user should be returned to the homepage - correct
+- When clicking the relevent button from the register page, the user should be redirected to the login page - correct
+- When clicking the relevent button from the login page, the user should be redirected to the register page - correct
+- When clicking on the social media links in the footer, the user should be taken to the relevent social media site - correct 
+
+Admin actions:
+- Once an admin confirms a booking, it's status should change for the relevent user - correct
+- An admin should be able to delete a booking at will if needed - correct
+- An admin should be able to see user usernames and emails, but not their password - correct
+- An admin should be able to add and delete users at will if needed - correct
 
 
 **Bugs identified:**
