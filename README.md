@@ -64,7 +64,7 @@ This site has several key features that allow it to fulfil the project brief:
 
 Below is a view of the site from a signed in and not signed in perspective, showing the users current bookings
 
-![Signup page](static/assets/images/signup.png)
+![Signup page](sign_up.png)
 
 ![Homepage](assets/images/homepage.png)
 
