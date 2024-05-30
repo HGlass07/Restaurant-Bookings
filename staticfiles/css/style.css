@@ -107,6 +107,14 @@ h1 {
     margin: 0 auto;
 }
 
+.text-area {
+    max-width: 100%;
+    max-height: 200px; 
+    resize: both;
+    min-width: 100%;
+    min-height: 100px;
+}
+
 #booking-details {
     display: flex;
     flex-wrap: wrap;
