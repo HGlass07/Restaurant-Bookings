@@ -57,7 +57,43 @@ This design planning of the site was done using github projects, and was based a
 --------------
 ## Features:
 
+This site has several key features that allow it to fulfil the project brief:
 
+### User authentication:
+- This allows users to see information that is relevent to them by signing in using their details. Users can come back to their saved bookings at any time.
+
+Below is a view of the site from a signed in and not signed in perspective, showing the users current bookings
+
+![Signup page](assets/images/signup.png)
+
+![Homepage](assets/images/homepage.png)
+
+![Homepage logged in](assets/images/bookings_view.png)
+
+### Booking form:
+
+- This allows users to create and customise their bookings, within certain perameters - such as the business' operating hours, and a 2 table booking limit at any one time. This information is specified clearly on the homepage.
+
+![Booking form](assets/images/booking_creation.png)
+
+### Menu:
+
+- Below is the menu that users can view and download from the header and homepage text
+
+![Menu](assets/images/menu_screenshot.png)
+
+## Future Features:
+
+There are several features that could be implemented in this project in future:
+
+- Automatic email confirmation - Instead of admins manually emailing users regarding their bookings, an automatic system could do this based on the confimation status of bookings.
+
+- A 'smart' booking system, whereby user booking requests are cross-referenced with data regarding available bookings e.g. table numbers, capacity at each table.
+
+- Bookings automatically being deleted once the booked date has elapsed - this would free up people's booking slots more efficiently.
+
+- A seperate admin portal as part of the main site, so that admins can carry out admin functions without having to use the backend.
+  
 --------------
 ## Testing:
 
