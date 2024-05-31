@@ -130,6 +130,12 @@ Admin actions:
 
 **Bugs identified:**
 
+Resolved:
+- One bug that was discovered during testing was that occasionally browsers would label the site as unsafe to visit. This was refuted by running the site through Sucuri and VirusTotal, which confirmed no malicious links etc were present on the site. By rolling the deployment back to a previous version this problem was fixed, and the site now displays with no problems, however the specific source of this problem was not identified.
+
+Unresolved:
+- A minor bug that remains unresolved relates to the manu display. For some reason, the site is able to display a version of the menu with three identical pages, but not one. Despite testing with a variety of different documents and naming conventions, this problem could not be resolved - however it is not considered serious, as the menu still displays with all information visible.
+
 
 **Validation:**
 - W3C HTML validation 
@@ -147,10 +153,22 @@ Admin actions:
 
 </details>
 
-- JSHint Javascript validator
-<details><summary>JS validation</summary>
 
-![JS val screenshot](assets/images/js_validation.png)
+- pep8 validator
+<details><summary>Python validation</summary>
+
+![Python pep8 screenshot](assets/images/models_pep8.png)
+
+![Python pep8 screenshot](assets/images/view_pep8.png)
+
+![Python pep8 screenshot](assets/images/form_pep8.png)
+
+![Python pep8 screenshot](assets/images/urls_pep8.png)
+
+![Python pep8 screenshot](assets/images/apps_pep8.png)
+
+![Python pep8 screenshot](assets/images/admin_pep8.png)
+
 
 </details>
 
@@ -158,9 +176,12 @@ Admin actions:
 
 ![homepage lighthouse score](assets/images/lighthouse.png)
 
-- Am I Responsive and Responsinator 
 
-![responsiveness quiz screenshot](assets/images/response1.png) ![responsiveness score screenshot](assets/images/response2.png)
+- Screen responsiveness
+
+![Mobile responsiveness](assets/images/mobile1.png) ![Mobile responsiveness](assets/images/mobile2.png)
+
+![Mobile responsiveness](assets/images/tablet1.png) ![Mobile responsiveness](assets/images/tablet2.png)
 
 
 --------------
