@@ -47,10 +47,20 @@ This design planning of the site was done using github projects, and was based a
 [Github Project](https://github.com/users/HGlass07/projects/6)
 
 **Wireframes - made using Balsamiq**
-  
-<details><summary>Wireframes</summary>
 
-![wireframe1 screenshot](assets/images/wireframe1.png)
+The wireframes below were used to guide the look and feel of the site. As can be seen, the style evolved from first inception to a more streamlined, user-friendly interface.
+  
+<details><summary>Initial wireframe</summary>
+
+![wireframe1 screenshot](assets/images/balsamiq1.png)
+
+</details>
+
+<details><summary>Finalised design</summary>
+
+![wireframe1 screenshot](assets/images/balsamiq2.png)
+
+![wireframe1 screenshot](assets/images/balsamiq3.png)
 
 </details>
 
