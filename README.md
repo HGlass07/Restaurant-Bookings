@@ -36,7 +36,10 @@ In order to make a booking, users are required to create an account - this is so
 **Returning user:**
 - As a returning user, I want to be able to easily access my current bookings
 - I want to have the option to edit or delete bookings if my plans change.
-
+- As a customer I can submit a date and time of my choosing with my booking query, so that my options are flexible
+- As a customer I can submit additional booking information so that I can specify details such as allergies and accessibility requirements.
+- As a customer I can view the restaurant menu on the website so that can be informed about dining options
+  
 --------------
 
 ## Design: 
@@ -63,6 +66,8 @@ The wireframes below were used to guide the look and feel of the site. As can be
 ![wireframe1 screenshot](assets/images/balsamiq3.png)
 
 </details>
+
+
 
 **Database**
 
@@ -153,7 +158,7 @@ Resolved:
 - One bug that was discovered during testing was that occasionally browsers would label the site as unsafe to visit. This was refuted by running the site through Sucuri and VirusTotal, which confirmed no malicious links etc were present on the site. By rolling the deployment back to a previous version this problem was fixed, and the site now displays with no problems, however the specific source of this problem was not identified.
 
 Unresolved:
-- A minor bug that remains unresolved relates to the manu display. For some reason, the site is able to display a version of the menu with three identical pages, but not one. Despite testing with a variety of different documents and naming conventions, this problem could not be resolved - however it is not considered serious, as the menu still displays with all information visible.
+- A minor bug that remains unresolved relates to the menu display. For some reason, the site is able to display a version of the menu with three identical pages, but not one. Despite testing with a variety of different documents and naming conventions, this problem could not be resolved - however it is not considered serious, as the menu still displays with all information visible.
 
 
 **Validation:**
@@ -257,4 +262,4 @@ The models and views used in this project were created with the aid of the follo
 --------------
 ## Aknowledgements:
 
-I would like to thank my tutor Antonio for his guidance in this project, as well as my friends and family for helping to test the app.
+I would like to thank my tutor Antonio for his guidance in this project, as well as my friends and family for helping to test the site.
