@@ -64,6 +64,15 @@ The wireframes below were used to guide the look and feel of the site. As can be
 
 </details>
 
+**Database**
+
+For this project, postgreSQL was used for the data management, with the primary databases consisting of user information, and booking information - which can be seen below.
+
+![Database users](assets/images/database_users.png)
+
+![Database bookings model](assets/images/database_model.png)
+
+
 --------------
 ## Features:
 
